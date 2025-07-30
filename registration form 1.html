@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    .container {
+      background: #fff;
+      padding: 25px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, label {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    input[type="submit"] {
+      width: auto;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Student Registration Form</h2>
+  <form action="/submit" method="post">
+    
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required pattern="[A-Za-z\s]+" title="Only letters and spaces allowed">
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="5" max="100" required>
+    
+    <input type="submit" value="Register">
+    
+  </form>
+</div>
+
+</body>
+</html>
